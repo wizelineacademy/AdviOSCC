@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="POP_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfH-GW-O3W" customClass="AnimatableTextField" customModule="POP_Views" customModuleProvider="target">
+                                <rect key="frame" x="15" y="248" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9g4-ES-Ehm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55l-rs-eop" customClass="AnimatableTextField" customModule="POP_Views" customModuleProvider="target">
+                                <rect key="frame" x="15" y="298" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fVe-HS-Kfw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wizeline" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-lv-LF3">
+                                <rect key="frame" x="87" y="28" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GMQ-aX-Q5r"/>
+                                    <constraint firstAttribute="width" constant="200" id="kNb-yW-iNV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You must enter username and password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xro-KV-HxN" customClass="AnimatableLabel" customModule="POP_Views" customModuleProvider="target">
+                                <rect key="frame" x="15" y="353" width="345" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.87218087909999997" green="0.22035163639999999" blue="0.16616210340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNG-Ai-fXU" customClass="AnimatableButton" customModule="POP_Views" customModuleProvider="target">
+                                <rect key="frame" x="15" y="379" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.87218087911605835" green="0.22035163640975952" blue="0.16616210341453552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sfe-AT-VmD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BA1-vs-ESV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xro-KV-HxN" firstAttribute="trailing" secondItem="55l-rs-eop" secondAttribute="trailing" id="1y1-f2-FCN"/>
+                            <constraint firstItem="xro-KV-HxN" firstAttribute="top" secondItem="55l-rs-eop" secondAttribute="bottom" constant="15" id="91s-Gf-Csp"/>
+                            <constraint firstItem="55l-rs-eop" firstAttribute="trailing" secondItem="WfH-GW-O3W" secondAttribute="trailing" id="ALs-K8-a87"/>
+                            <constraint firstItem="yNG-Ai-fXU" firstAttribute="top" secondItem="xro-KV-HxN" secondAttribute="bottom" constant="8" id="CmV-cK-8BA"/>
+                            <constraint firstItem="55l-rs-eop" firstAttribute="leading" secondItem="WfH-GW-O3W" secondAttribute="leading" id="EZH-67-57U"/>
+                            <constraint firstItem="xro-KV-HxN" firstAttribute="leading" secondItem="55l-rs-eop" secondAttribute="leading" id="FK4-iw-TmV"/>
+                            <constraint firstItem="WfH-GW-O3W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Fbe-TF-4EE"/>
+                            <constraint firstAttribute="trailing" secondItem="WfH-GW-O3W" secondAttribute="trailing" constant="15" id="GZZ-Du-TJl"/>
+                            <constraint firstItem="WfH-GW-O3W" firstAttribute="top" secondItem="TwN-lv-LF3" secondAttribute="bottom" constant="20" id="T7V-GJ-0Yj"/>
+                            <constraint firstItem="TwN-lv-LF3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YEP-44-u0n"/>
+                            <constraint firstItem="yNG-Ai-fXU" firstAttribute="leading" secondItem="55l-rs-eop" secondAttribute="leading" id="ace-t8-4Z6"/>
+                            <constraint firstItem="55l-rs-eop" firstAttribute="top" secondItem="WfH-GW-O3W" secondAttribute="bottom" constant="10" id="l5c-ba-XaI"/>
+                            <constraint firstItem="TwN-lv-LF3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="lRC-ZF-RFz"/>
+                            <constraint firstItem="yNG-Ai-fXU" firstAttribute="trailing" secondItem="55l-rs-eop" secondAttribute="trailing" id="u0x-K4-K9L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="xro-KV-HxN" id="gjV-Hl-Voe"/>
+                        <outlet property="passwordTextField" destination="55l-rs-eop" id="bra-sO-4Fx"/>
+                        <outlet property="signInButton" destination="yNG-Ai-fXU" id="0Jo-80-Qn6"/>
+                        <outlet property="userNameTextField" destination="WfH-GW-O3W" id="ML2-60-SKO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wizeline" width="200" height="200"/>
+    </resources>
+</document>
